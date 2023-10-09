@@ -41,3 +41,31 @@ fn display_result(comparison: Ordering) {
 fn has_found(comparison: Ordering) -> bool {
     comparison == Ordering::Equal
 }
+
+
+// ... (Votre code source précédent)
+
+#[cfg(test)]
+mod tests {
+    // Importer tout depuis le module parent (cela rend toutes les fonctions 
+    // et structures de données du module parent disponibles pour les tests)
+    use super::*;
+
+    #[test]
+    fn twelve_equals_twelve() {
+        let result = get_ordering(12, 12);
+        assert_eq!(result, std::cmp::Ordering::Equal);
+    }
+
+    #[test]
+    fn twelve_greater_than_five() {
+        let result = get_ordering(12, 5);
+        assert_eq!(result, std::cmp::Ordering::Greater);
+    }
+
+    #[test]
+    fn twelve_lesser_than_twenty() {
+        let result = get_ordering(12, 20);
+        assert_eq!(result, std::cmp::Ordering::Less);
+    }
+}
