@@ -101,7 +101,7 @@ Pour utiliser ce crate, nous allons faire appel à Cargo pour gérer la dépenda
 Quels fichiers et répertoires ont été générés par cette commande ?
 +
 ....
-🡆 Répondre ici 🡄
+🡆 Cargo.toml, Cargo.toml, src/main.rs 🡄
 ....
 .. Déplacez `devine_mon_nombre.rs` vers `src/main.rs` en utilisant https://git-scm.com/docs/git-mv[`git mv`].
 .. Exécutez votre programme avec https://doc.rust-lang.org/cargo/commands/cargo-run.html[`cargo run`].
